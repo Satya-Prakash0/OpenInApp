@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#0e6ffe">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
+
+                />
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dashboard_settings"
+                android:backgroundTint="#0e6ffe" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="1203dp"
+            android:layout_marginTop="85dp"
+            android:background="@drawable/mainarea">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txtGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+
+                    android:text="Good Morning"
+                    android:textColor="#a1a2a4"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/txtUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtGreeting"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="22dp"
+                    android:text="Satya Prakash"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/txtGreeting"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="22dp"
+                    android:layout_toRightOf="@id/txtUsername"
+                    android:src="@mipmap/waving" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/txtUsername"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/chartdrawable"
+                    android:elevation="1dp"
+                    android:padding="30dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/dashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_below="@id/lineChart"
+                    android:layout_margin="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="105dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/card">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/baseline_ads_click_242"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/totalcliks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="90dp"
+                                android:text="Total Cicks"
+                                android:textColor="#FFA1A2A4" />
+
+
+                            <TextView
+                                android:id="@+id/txtTotalClicks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerInParent="true"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="25sp"></TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="105dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/card">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/baseline_ads_click_24"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/txtTodaysClicks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/todaycliks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="90dp"
+                                android:text="Today's Clicks"
+                                android:textColor="#FFA1A2A4" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="105dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/card">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/viewalllinkimg"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/txtTotalLinks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerInParent="true"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="25sp" />
+
+                            <TextView
+                                android:id="@+id/totallinks"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="90dp"
+                                android:text="Total Links"
+                                android:textColor="#FFA1A2A4" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="105dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/card">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/baseline_add_location_24"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/toplocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="90dp"
+                                android:text="Top Location"
+                                android:textColor="#FFA1A2A4" />
+
+                            <TextView
+                                android:id="@+id/txtTopLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerInParent="true"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="25sp"></TextView>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="105dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/card">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/baseline_album_24"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/topsoure"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="90dp"
+                                android:text="Top Source"
+                                android:textColor="#FFA1A2A4" />
+
+                            <TextView
+                                android:id="@+id/txtTopSource"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:ellipsize="end"
+                                android:text="1"
+                                android:singleLine="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:textColor="@color/black"
+                                android:textSize="24sp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="105dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/card">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingTop="10dp"
+                                android:src="@drawable/baseline_access_time_24"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:id="@+id/besttime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="90dp"
+                                android:text="Best Time"
+                                android:textColor="#FFA1A2A4" />
+
+                            <TextView
+                                android:id="@+id/txtBestTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerInParent="true"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="25sp"></TextView>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <RelativeLayout
+                    android:id="@+id/ViewAnaytics"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/dashboard"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/analytics"
+                    android:paddingLeft="15dp"
+
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/Analytics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="View Analytics"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:layout_toLeftOf="@id/Analytics"
+                        android:background="@drawable/analyticsdr" />
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="300dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/ViewAnaytics"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="#eeeeee"
+                    app:tabGravity="fill"
+                    app:tabIndicator="@drawable/tabindicator"
+                    app:tabIndicatorAnimationMode="elastic"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/black">
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tabLayout">
+
+                </androidx.viewpager2.widget.ViewPager2>
+
+                <RelativeLayout
+                    android:id="@+id/ViewAlllinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/viewPager2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/analytics"
+                    android:paddingLeft="15dp"
+
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:id="@+id/txtviewalllinks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="View all Links"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toLeftOf="@id/txtviewalllinks"
+                        android:background="@drawable/viewalllinkimg" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_below="@id/ViewAlllinks"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/talk">
+
+
+                    <ImageView
+                        android:id="@+id/imgtalk"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/baseline_chat_24" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/imgtalk"
+                        android:text="Talk with us"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/FAQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_below="@id/chat"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/faq">
+
+
+                    <ImageView
+                        android:id="@+id/imgFaq"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/baseline_question_mark_24" />
+
+                    <TextView
+                        android:layout_width="220dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/imgFaq"
+                        android:text="Frequently Asked Question"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_below="@id/FAQ">
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/bottomAppBar"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="10dp"
+                app:fabCradleVerticalOffset="10dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/bottomNavigationView"
+                    android:layout_marginRight="16dp"
+                    app:menu="@menu/bottom_nav_menu"
+                    android:background="@drawable/transparent_background" />
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab"
+                android:backgroundTint="#0e6ffe"
+                android:src="@drawable/baseline_add_24"
+                app:layout_anchor="@id/bottomAppBar" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </RelativeLayout>
+</layout>
