@@ -5,6 +5,7 @@ A demo app that fetches the data from api and show it on the dashboard
 ## App Preview ##
 <img src="https://github.com/Satya-Prakash0/OpenInApp/assets/83579946/5c4edea2-b569-403f-bc19-180f8e2aeb00" alt = "DashBoard" width=280/> 
 <img src="https://github.com/Satya-Prakash0/OpenInApp/assets/83579946/8d4a9323-7cb5-4272-8289-2b6db8822ba1" alt="DashBoard" width=280/>
+<img src="https://github.com/Satya-Prakash0/OpenInApp/assets/83579946/f3d51826-abc2-47c3-9b54-894e7a5e62b5" alt="DashBoard" width=280/>
 
 ## Features ##
 
